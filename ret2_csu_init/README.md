@@ -286,6 +286,11 @@ pop r13
 pop r14
 pop r15
 ret
+[0x00400450]> pi 4 @ 0x4005ee
+pop r13
+pop r14
+pop r15
+ret
 [0x00400450]> pi 4 @ 0x4005ef
 pop rbp
 pop r14
@@ -309,4 +314,4 @@ ret
 ret
 ```
 
-Cool stuff.
+Cool stuff. (useful for BROP)
