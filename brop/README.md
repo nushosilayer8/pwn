@@ -117,7 +117,7 @@ If there is a canary, we have to brute-force it byte by byte, making it `256 * 8
 As explained earlier, to find a BROP gadget, we need to use a stop gadget.
 
 Our payload is in this form
-```python
+```
 padding_bytes|canary(if there is)|address
 ```
 
