@@ -8,7 +8,7 @@ SROP was published by Erik Bosman from Vrije Universiteit Amsterdam in 2014.
 ### Signal handling
 Signal handling is a mechanism in UNIX systems for processes to communicate with each other. During signal handling, firstly, there will be a context save of the current process, then the signal handler is executed, and finally the context is restored and execution continues as normal.
 
-![signal handling](signal-handling-context.png)
+![signal handling](https://raw.githubusercontent.com/nush-osi-layer-8/pwn/master/srop/images/signal-handling-context.png)
 
 ### Context
 The **context** is just all the registers and some other information that represent the current state of the process. To be more precise, here are the `sigcontext` for x86 and x64.
@@ -142,7 +142,8 @@ However, there are some conditions
 
 ## Example
 ### Challenge
-We will use a challenge from 360春秋杯, [smallest-pwn](link-to-binary). (this is pretty much just a rewrite of [this](https://ctf-wiki.github.io/ctf-wiki/pwn/stackoverflow/advanced_rop/#srop) in English)
+We will use a challenge from 360春秋杯, [smallest-pwn](https://github.com/nush-osi-layer-8/pwn/raw/master/srop/smallest).
+(this is pretty much just a rewrite of [this](https://ctf-wiki.github.io/ctf-wiki/pwn/stackoverflow/advanced_rop/#srop) in English)
 
 Disassembly of the binary shows that it really is very small.
 
