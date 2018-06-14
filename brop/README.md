@@ -27,14 +27,14 @@ Stop gadgets are gadgets that tell us when to stop finding. Essentially, this ga
 
 Since from our perspective a service crashing or just finished executing looks the same, by setting the stop gadget as the return address of an address we want to test, we can know whether the instructions at that address actually crashed the service or had just finished executing.
 
-![stop-gadget](./images/stop-gadget.png)
+![stop-gadget](https://raw.githubusercontent.com/nush-osi-layer-8/pwn/master/brop/images/stop_gadget.png)
 
 #### BROP gadget
 As the end of the `__libc_csu_init` function, there is a gadget that pops 6 registers from the stack. ([ret2_csu_init](https://github.com/nush-osi-layer-8/pwn/tree/master/ret2_csu_init))
 
 If we take the addresses in between, we all have `pop rsi` and `pop rdi` gadgets.
 
-![brop-gadget](./images/brop-gadget.png)
+![brop-gadget](https://raw.githubusercontent.com/nush-osi-layer-8/pwn/master/brop/images/brop_gadget.png)
 
 ## Exploitation
 Explanation of the exploitation steps is described below with an accompanying example.
