@@ -165,7 +165,7 @@ If it really does pop 2 registers, we will safely return to stop gadget and the 
 In our case, we want to find the BROP gadget that pops 6 registers. So our payload would be,
 
 ```
-padding|address|64 bytes to pop|stop gadget|bad addresses
+padding|address|48 bytes to pop|stop gadget|bad addresses
 ```
 
 (note that we have no canary in this example)
